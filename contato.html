@@ -1,0 +1,103 @@
+<section id="contato" class="pt-5 secao-contato">
+    <div class="container py-4">
+        
+        <!-- Cabeçalho da Seção -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <span class="badge bg-danger text-uppercase tracking-widest mb-2 px-3 py-2">
+                    Relatório - DFC
+                </span>
+                <h2 class="titulo-secao text-uppercase fw-bold text-white">Registros</h2>
+                <div class="linha-decorativa mx-auto"></div>
+                <p class="text-light small mt-3 mx-auto" style="max-width: 600px;">
+                    Presenciou alguma anomalia dimensional, Objeto de Poder ou Evento de Mundo Alterado? Envie o relatório confidencial abaixo para a divisão de campo do DFC investigar.
+                </p>
+            </div>
+        </div>
+
+        <!-- Formulário de Registro -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8">
+                <div class="card-formulario-fbc p-4 p-md-5">
+                    
+                    <!-- O ID gerado no site formspree.io -->
+                    <form id="form-registro-eam" action="https://formspree.io/f/xvkaavqv" method="POST" novalidate>
+                        
+                        <div class="row g-3">
+                            <!-- Campo 1: Nome -->
+                            <div class="col-md-6">
+                                <label for="nome-agente" class="form-label text-uppercase small fw-bold text-light font-monospace">
+                                    Nome do Informante <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control input-fbc" id="nome-agente" name="nome" placeholder="Ex: Agente Casey" required>
+                                <div class="invalid-feedback font-monospace small" id="erro-nome"></div>
+                            </div>
+
+                            <!-- Campo 2: E-mail para contato -->
+                            <div class="col-md-6">
+                                <label for="email-contato" class="form-label text-uppercase small fw-bold text-light font-monospace">
+                                    E-mail para Contato <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" class="form-control input-fbc" id="email-contato" name="email" placeholder="Ex: alexcasey@gmail.com" required>
+                                <div class="invalid-feedback font-monospace small" id="erro-email"></div>
+                            </div>
+
+                            <!-- Campo 3: Evento Paranatural observado -->
+                            <div class="col-12">
+                                <label for="evento-observado" class="form-label text-uppercase small fw-bold text-light font-monospace">
+                                    Evento Paranatural Observado <span class="text-danger">*</span>
+                                </label>
+                                <select class="form-select input-fbc" id="evento-observado" name="evento_paranatural" required>
+                                    <option value="" selected disabled>Selecione a classificação da anomalia...</option>
+                                    <option value="Objeto de Poder (OoP)">Objeto de Poder (OdP)</option>
+                                    <option value="Item Alterado (IA)">Item Alterado (IA)</option>
+                                    <option value="Limiar / Ruptura Dimensional">Limiar</option>
+                                    <option value="Entidade / Ressonância Hostil">Entidade Paranatural</option>
+                                    <option value="Evento de Mundo Alterado (EMA)">Evento de Mundo Alterado (EMA)</option>
+                                    <option value="Outro Fenômeno Não Classificado">Outro Fenômeno Não Classificado</option>
+                                </select>
+                                <div class="invalid-feedback font-monospace small" id="erro-evento"></div>
+                            </div>
+
+                            <!-- Campo 4: Descrição do Acontecimento -->
+                            <div class="col-12">
+                                <label for="descricao-eam" class="form-label text-uppercase small fw-bold text-light font-monospace">
+                                    Descrição do Acontecimento <span class="text-danger">*</span>
+                                </label>
+                                <textarea class="form-control input-fbc" id="descricao-eam" name="descricao" rows="4" placeholder="Relate local, horário, sintomas ou características observadas..." required></textarea>
+                                <div class="invalid-feedback font-monospace small" id="erro-descricao"></div>
+                            </div>
+
+                            <!-- Área de Feedback Dinâmico (Sucesso / Erro) -->
+                            <div class="col-12">
+                                <div id="feedback-formulario" class="alert d-none font-monospace small mb-0" role="alert"></div>
+                            </div>
+
+                            <!-- Botão de Envio -->
+                            <div class="col-12 text-end mt-4">
+                                <button type="submit" id="btn-enviar-eam" class="btn btn-danger text-uppercase fw-bold px-4 py-2 font-monospace">
+                                    Transmitir Relatório // FBC
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Rodapé Oficial -->
+    <footer class="py-4 border-top border-secondary text-center" style="background-color: #08080a;">
+        <div class="container">
+            <p class="text-uppercase font-monospace small text-danger mb-1">
+                // DEPARTAMENTO FEDERAL DE CONTROLE — ARQUIVO RESTRITO UCR
+            </p>
+            <p class="small text-secondary mb-0">
+                &copy; 2026 Remedyverso SPA. Projeto acadêmico de Front-end desenvolvido por Davi Godec Cardoso.
+            </p>
+        </div>
+    </footer>
+</section>

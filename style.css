@@ -1,0 +1,659 @@
+/* Zerar margens e paddings globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222225 !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajuste do Scroll para a Navbar Fixa sem empurrar a Hero Section */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+/* 1. Mudar a cor de fundo da Navbar e a borda inferior */
+.navbar {
+    background-color: #08080a !important;
+    border-bottom: 2px solid #e50914 !important;
+}
+
+/* 2. Mudar a cor do Logotipo RCU */
+.navbar-brand span {
+    color: #e50914 !important;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+/* 3. Mudar a cor dos Links do Menu */
+.navbar-nav .nav-link {
+    color: #a0a0a0 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgb(255, 217, 0);
+}
+
+#btn-tema:hover {
+    background-color: #e50914 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 12px rgba(229, 9, 20, 0.6);
+}
+
+/* Estilo da Tela de Início (Hero) */
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 0 !important;
+    padding-top: 70px !important;
+    padding-bottom: 20px;
+    background: linear-gradient(rgba(10, 10, 12, 0.35), rgba(10, 10, 12, 0.55)), 
+                url('https://sm.ign.com/t/ign_es/news/s/sam-lake-r/sam-lake-receives-the-andrew-yoon-legend-award-and-opens-up_wctp.1280.jpg') no-repeat center top / cover !important;
+    border-bottom: 2px solid #e50914;
+}
+
+.hero-section .badge {
+    margin-top: 0 !important;
+}
+
+.hero-title {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    color: #cccccc;
+    max-width: 700px;
+}
+
+/* Linha decorativa abaixo dos títulos */
+.linha-decorativa {
+    height: 3px;
+    width: 60px;
+    background-color: #e50914;
+    margin-top: 8px;
+}
+
+/* Customização do Accordion */
+.remedy-accordion .accordion-item {
+    background-color: #141418;
+    border: 1px solid #2a2a30;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.remedy-accordion .accordion-button {
+    background-color: #141418;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.remedy-accordion .accordion-button:not(.collapsed) {
+    background-color: #1c1c22;
+    color: #e50914;
+    box-shadow: inset 0 -1px 0 rgba(229, 9, 20, 0.5);
+}
+
+.remedy-accordion .accordion-item:nth-child(odd) .accordion-button:hover {
+    color: #d4111b !important;
+}
+
+.remedy-accordion .accordion-item:nth-child(even) .accordion-button:hover {
+    color: #6f9b6f !important;
+}
+
+.remedy-accordion .accordion-button::after {
+    filter: invert(13%) sepia(94%) saturate(7465%) hue-rotate(356deg) brightness(91%) contrast(93%);
+}
+
+.remedy-accordion .accordion-body {
+    background-color: #0d0d10;
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-top: 1px solid #2a2a30;
+}
+
+.codigo-fbc {
+    color: #e50914;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+/* Seção Conceitos com Imagem de Fundo */
+.secao-conceitos {
+    background: linear-gradient(rgba(10, 10, 12, 0.35), rgba(10, 10, 12, 0.92)), 
+                url('https://static.wikia.nocookie.net/control6745/images/5/51/Control_concept_art_-_Leonardo_Calamati_-_Outside_the_Oldest_House_visual_development.jpg/revision/latest/scale-to-width-down/156?cb=20241226034208') no-repeat center center / cover !important;
+    border-bottom: 2px solid #e50914;
+}
+
+/* Card de Agente / Sujeito de Interesse */
+.card-agente {
+    background-color: #121216;
+    border: 1px solid #2a2a35;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-agente:hover {
+    transform: translateY(-3px);
+    border-color: #e50914;
+}
+
+.img-container {
+    background-color: #0d0d11;
+    overflow: hidden;
+}
+
+.foto-agente {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.card-agente:hover .foto-agente {
+    filter: grayscale(0%) contrast(100%);
+}
+
+.card-agente p {
+    color: #dbd9d9 !important; 
+}
+
+/* Card de Artefato / Objeto de Poder */
+.card-artefato {
+    background-color: #121216;
+    border: 1px solid #2a2a35;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-artefato:hover {
+    transform: translateY(-3px);
+    border-color: #e50914;
+}
+
+.foto-artefato {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.card-artefato:hover .foto-artefato {
+    filter: grayscale(0%) contrast(100%);
+}
+
+.texto-descricao-artefato {
+    color: #a0a0ab !important;
+}
+
+.card-artefato:hover h6 {
+    color: #e50914;
+}
+
+.remedy-accordion .accordion-collapse {
+    transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.remedy-accordion .accordion-collapse.collapsing,
+.remedy-accordion .accordion-collapse.show {
+    animation: revelarConteudoFBC 1.5s ease-out forwards;
+}
+
+@keyframes revelarConteudoFBC {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner-conceito {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(80%) contrast(120%);
+    transition: filter 0.3s ease;
+}
+
+.banner-conceito:hover {
+    filter: grayscale(0%) contrast(100%);
+}
+
+/* =================================================== */
+/*  SEÇÃO CRIADOR DO PROJETO / DIREÇÃO                 */
+/* =================================================== */
+
+.secao-criador {
+    background: linear-gradient(rgba(10, 10, 12, 0.80), rgba(10, 10, 12, 0.92)), 
+                url('https://flowgames.gg/wp-content/uploads/2023/06/Alan-Wake-II_2023_05-24-23_011-scaled.jpg') no-repeat center center / cover;
+    border-bottom: 2px solid #e50914;
+}
+
+@media (min-width: 768px) {
+    .divisor-vertical-fbc {
+        border-right: 2px solid #e50914;
+    }
+}
+
+.moldura-foto-criador {
+    width: 100%;
+    max-width: 300px;
+    height: 360px;
+    margin: 0 auto;
+    background-color: #121216;
+    border: 1px solid #2a2a35;
+    padding: 6px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.moldura-foto-criador:hover {
+    border-color: #e50914;
+    transform: translateY(-4px);
+}
+
+.foto-criador {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.moldura-foto-criador:hover .foto-criador {
+    filter: grayscale(0%) contrast(100%);
+}
+
+.descricao-tracejada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.descricao-tracejada::before,
+.descricao-tracejada::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px dashed #6c757d;
+}
+
+/* ===================================================
+   SEÇÃO JOGOS / ARQUIVOS DO UNIVERSO CONECTADO
+   =================================================== */
+
+.secao-jogos {
+    background-color: #0d0d10;
+    border-bottom: 2px solid #e50914;
+}
+
+.moldura-capa-jogo {
+    width: 100%;
+    max-width: 230px;
+    height: 310px;
+    margin: 0 auto;
+    background-color: #121216;
+    border: 1px solid #2a2a35;
+    padding: 5px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moldura-capa-jogo:hover {
+    border-color: #e50914;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(229, 9, 20, 0.25);
+}
+
+.capa-jogo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.moldura-capa-jogo:hover .capa-jogo {
+    filter: grayscale(0%) contrast(100%);
+}
+
+.simbolo-conexao-jogo {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #e50914;
+    line-height: 1;
+    user-select: none;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+}
+
+.divisor-linha-jogos {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e50914, transparent);
+    opacity: 0.75;
+    margin: 3rem 0;
+}
+
+/* ===================================================
+   ROLAGEM INTERNA NOS CARDS DE PARAUTILITÁRIOS
+   =================================================== */
+
+.texto-rolavel-card {
+    max-height: 95px;
+    overflow-y: auto;
+    padding-right: 4px;
+    text-align: left;
+}
+
+.texto-rolavel-card::-webkit-scrollbar {
+    width: 4px;
+}
+
+.texto-rolavel-card::-webkit-scrollbar-track {
+    background: #121216;
+    border-radius: 4px;
+}
+
+.texto-rolavel-card::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 4px;
+}
+
+/* ===================================================
+   SEÇÃO LINHA DO TEMPO (SERPENTINA FBC / CRONOLOGIA)
+   =================================================== */
+
+.secao-timeline {
+    background-color: #0a0a0d;
+    border-bottom: 2px solid #e50914;
+    overflow-x: hidden;
+}
+
+.timeline-serpentina {
+    max-width: 960px;
+    margin: 110px auto 0 auto;
+    padding: 20px 30px;
+}
+
+.timeline-andar {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 260px;
+    border-top: 2px solid #e50914;
+    padding: 0 40px;
+}
+
+.timeline-andar.curva-direita {
+    border-right: 2px solid #e50914;
+    border-top-right-radius: 130px;
+    border-bottom-right-radius: 130px;
+    margin-left: 40px;
+}
+
+.timeline-andar.inicio-linha::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: #e50914;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #e50914;
+}
+
+.timeline-andar.fim-linha {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: -2px;
+    min-height: 180px;
+    align-items: flex-start;
+}
+
+.timeline-andar.fim-linha::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: #e50914;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #e50914;
+}
+
+.timeline-andar.curva-esquerda {
+    border-top-color: #588f58;
+    border-left: 2px solid #588f58;
+    border-top-left-radius: 130px;
+    border-bottom-left-radius: 130px;
+    margin-right: 40px;
+    margin-top: -2px;
+}
+
+.timeline-andar.curva-esquerda .ponto-marco {
+    border-color: #588f58;
+    box-shadow: 0 0 10px #588f58;
+}
+
+.timeline-andar.curva-esquerda .marco-evento:hover .ponto-marco {
+    background-color: #588f58;
+}
+
+.timeline-andar.curva-esquerda .card-marco {
+    border-left-color: #588f58;
+}
+
+.timeline-andar.curva-esquerda .marco-evento:hover .card-marco {
+    border-color: #588f58;
+}
+
+.timeline-andar.curva-esquerda .badge {
+    color: #588f58 !important;
+}
+
+.marco-evento {
+    position: relative;
+    width: 42%;
+    max-width: 310px;
+    align-self: flex-start;
+}
+
+.ponto-marco {
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #0a0a0d;
+    border: 3px solid #e50914;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.8);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
+}
+
+.marco-evento:hover .ponto-marco {
+    background-color: #e50914;
+    transform: translateX(-50%) scale(1.25);
+}
+
+.card-marco {
+    background: rgba(18, 18, 24, 0.9);
+    border: 1px solid #2a2a35;
+    border-left: 3px solid #e50914;
+    padding: 12px 15px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.marco-evento:hover .card-marco {
+    border-color: #e50914;
+    transform: translateY(-3px);
+}
+
+.marco-abaixo .card-marco {
+    margin-top: 22px;
+}
+
+.marco-acima .card-marco {
+    transform: translateY(calc(-100% - 22px));
+}
+
+.marco-acima:hover .card-marco {
+    transform: translateY(calc(-100% - 25px));
+}
+
+@media (max-width: 767px) {
+    .timeline-serpentina {
+        padding: 10px 15px;
+    }
+
+    .timeline-andar,
+    .timeline-andar.curva-direita,
+    .timeline-andar.curva-esquerda,
+    .timeline-andar.fim-linha {
+        flex-direction: column;
+        border: none;
+        border-left: 2px solid #e50914;
+        border-radius: 0;
+        margin: 0 0 0 15px;
+        padding: 0 0 0 25px;
+        min-height: auto;
+    }
+
+    .timeline-andar.curva-esquerda {
+        border-left-color: #588f58;
+    }
+
+    .timeline-andar.inicio-linha::before,
+    .timeline-andar.fim-linha::after {
+        display: none;
+    }
+
+    .marco-evento {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .ponto-marco {
+        top: 14px;
+        left: -34px;
+        transform: none;
+    }
+
+    .marco-evento:hover .ponto-marco {
+        transform: scale(1.2);
+    }
+
+    .marco-abaixo .card-marco,
+    .marco-acima .card-marco {
+        margin-top: 0;
+        transform: none;
+    }
+
+    .marco-acima:hover .card-marco {
+        transform: translateY(-3px);
+    }
+}
+
+/* ===================================================
+   SEÇÃO CONTATO / REGISTRO DE EAM (FORMULÁRIO FBC)
+   =================================================== */
+
+.secao-contato {
+    background-color: #0d0d10;
+}
+
+.card-formulario-fbc {
+    background-color: #121216;
+    border: 1px solid #2a2a35;
+    border-top: 3px solid #e50914;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.input-fbc {
+    background-color: #0a0a0d !important;
+    border: 1px solid #2a2a35 !important;
+    color: #ffffff !important;
+    border-radius: 3px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-fbc:focus {
+    border-color: #e50914 !important;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.3) !important;
+}
+
+.input-fbc::placeholder {
+    color: #6c757d;
+}
+
+.input-fbc.campo-invalido {
+    border-color: #ff3b3b !important;
+    box-shadow: 0 0 8px rgba(255, 59, 59, 0.35) !important;
+}
+
+/* ===================================================
+   SEÇÃO JOGOS / ARQUIVOS DO UNIVERSO CONECTADO
+   =================================================== */
+
+.secao-jogos {
+    background: linear-gradient(rgba(10, 10, 12, 0.82), rgba(10, 10, 12, 0.94)), 
+                url('https://sirusgaming.com/wp-content/uploads/2023/11/alan-wake-2-ending_0008_7-1536x864.jpg') no-repeat center center / cover;
+    background-attachment: fixed; /* Efeito parallax suave (opcional) */
+    border-bottom: 2px solid #e50914;
+}
+
+/* ===================================================
+   SEÇÃO LINHA DO TEMPO (SERPENTINA FBC / CRONOLOGIA)
+   =================================================== */
+
+.secao-timeline {
+    background: linear-gradient(rgba(10, 10, 12, 0.85), rgba(10, 10, 12, 0.95)), 
+                url('https://m.media-amazon.com/images/M/MV5BNDk2MThjMmUtNTYzMC00NGNkLTg3NDMtMDFjN2E2ZWY3MDdlXkEyXkFqcGdeQTNwaW5nZXN0._V1_.jpg') no-repeat center center / cover;
+    border-bottom: 2px solid #e50914;
+    overflow-x: hidden;
+}
+
+/* ===================================================
+   SEÇÃO CONTATO / REGISTRO DE EAM (FORMULÁRIO FBC)
+   =================================================== */
+
+.secao-contato {
+    background: linear-gradient(rgba(10, 10, 12, 0.82), rgba(10, 10, 12, 0.94)), 
+                url('https://cdn1.epicgames.com/offer/00b9ec358e1f46daa4f8e1194d5081d8/Alan_Wake_LandscapeImage_New_2560x1440-7941107b8ec370d549a4db29e7b74e4b') no-repeat center center / cover;
+}

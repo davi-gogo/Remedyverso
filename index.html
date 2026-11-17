@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Remedyverso</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-danger">
+            <div class="container">
+            
+                <!-- 1. Logotipo / Título -->
+                <a class="navbar-brand fw-bold text-uppercase" href="#inicio">
+                    <span class="text-danger">UCR</span> - Remedyverso
+                </a>
+
+                <!-- 2. Botão Hambúrguer -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 3. Links do Menu (Âncoras para navegação SPA) -->
+                <div class="collapse navbar-collapse" id="menuNavegacao">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#criador">Criador do Projeto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#jogos">Jogos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#conceitos">Conceitos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#linha-tempo">Linha do Tempo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Relatório FBC</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Tela de Início / Hero Section -->
+        <section id="inicio" class="hero-section d-flex align-items-center justify-content-center text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <span class="badge bg-danger text-uppercase tracking-widest mb-3 px-3 py-2">
+                            Relatório Classificado Restrito
+                        </span>
+                        
+                        <h1 class="hero-title display-3 fw-bold text-uppercase mb-3">
+                            Universo Conectado da Remedy
+                        </h1>
+                        
+                        <p class="hero-subtitle lead mb-4 mx-auto">
+                            Tudo sobre o Universo conectado da Remedy, para quem quer conhecer melhor (Ou conhecer pela primeira vez) esse mundo que envolve <em>Alan Wake</em> e <em>Control</em>.
+                        </p>
+                        
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#conceitos" class="btn btn-danger btn-lg text-uppercase fw-bold px-4 py-3">
+                                Explorar os conceitos
+                            </a>
+                            <a href="#jogos" class="btn btn-outline-light btn-lg text-uppercase fw-bold px-4 py-3">
+                                Ver os Jogos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Seções Carregadas de Arquivos Separados -->
+        <div data-include="criador.html"></div>
+        <div data-include="jogos.html"></div>
+        <div data-include="conceitos.html"></div>
+        <div data-include="linha-tempo.html"></div>
+        <div data-include="contato.html"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
