@@ -2,7 +2,7 @@
 
 Aplicação Web One Page (SPA) desenvolvida como Projeto Final da unidade curricular de Front-end. O site apresenta de forma interativa e responsiva o universo conectado dos jogos da *Remedy Entertainment* (*Alan Wake* e *Control*), adotando uma identidade visual inspirada nos arquivos confidenciais e na estética do *Departamento Federal de Controle (DFC)*.
 
-*Link do Projeto Publicado (Deploy):* [COLE AQUI O LINK DO GITHUB PAGES APÓS PUBLICAR]
+*Link do Projeto Publicado (Deploy):* https://github.com/davi-gogo/Remedyverso
 
 ---
 
